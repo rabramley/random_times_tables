@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Times Tables</title>
+
+</head>
+<body>
+
+    <table>
+        <thead>
+            <th>
+                <td></td>
+                {% for t in tables %}
+                    <td>{{ t }}</td>
+                {% end %}
+            </th>
+        </thead>
+        <tbody>
+            {% for o in order %}
+                <td>{{ o }}</td>
+
+                {% for t in tables %}
+                    <td></td>
+                {% end %}
+            {% end %}
+        </tbody>
+    </table>
+</body>
+</html>
