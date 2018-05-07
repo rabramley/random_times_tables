@@ -4,26 +4,37 @@
     <meta charset="UTF-8">
     <title>Times Tables</title>
 
+    <style>
+        table,th,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px 30px;
+            text-align: center;
+        }
+    </style>
+
 </head>
 <body>
 
     <table>
         <thead>
-            <th>
-                <td></td>
+            <tr>
+                <th></th>
                 {% for t in tables %}
-                    <td>{{ t }}</td>
-                {% end %}
-            </th>
+                    <th>{{ t }}</th>
+                {% endfor %}
+            </tr>
         </thead>
         <tbody>
             {% for o in order %}
-                <td>{{ o }}</td>
+                <tr>
+                    <th>{{ o }}</th>
 
-                {% for t in tables %}
-                    <td></td>
-                {% end %}
-            {% end %}
+                    {% for t in tables %}
+                        <td></td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 </body>
