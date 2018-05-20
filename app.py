@@ -11,7 +11,7 @@ def create_pdf():
     random.shuffle(numbers)
 
     template_vars = {
-        "tables": [5, 4, 3],
+        "tables": list(range(2,13)),
         "order" : numbers
     }
 
